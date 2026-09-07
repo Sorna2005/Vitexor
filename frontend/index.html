@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VITEXOR — AI Code Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="page-background">
+        <div class="grid-overlay"></div>
+        <div class="glow glow-purple"></div>
+        <div class="glow glow-blue"></div>
+    </div>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="nav-inner">
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    <span>&lt;/&gt;</span>
+                </div>
+
+                <div class="brand-text">
+                    <div class="brand-name">
+                        Vitexor <span>AI</span>
+                    </div>
+
+                    <div class="brand-tagline">
+                        Intelligent Code Analysis
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="nav-right">
+
+                <div class="nav-feature">
+                    <span class="feature-dot"></span>
+                    AI Analysis
+                </div>
+
+                <div class="api-status">
+                    <span class="status-dot"></span>
+                    <span>API Online</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <main class="app-container">
+
+
+        <!-- =================================================
+             HERO / INTRO
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <span class="spark">✦</span>
+                    AI-POWERED DEVELOPER TOOL
+                </div>
+
+                <h1>
+                    Understand your code.
+                    <span>Improve every line.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Analyze your source code with AI and instantly discover
+                    bugs, security risks, performance bottlenecks,
+                    maintainability issues, and better coding practices.
+                </p>
+
+
+                <!-- Feature pills -->
+
+                <div class="feature-pills">
+
+                    <div class="feature-pill">
+                        <span>⌁</span>
+                        Bug Detection
+                    </div>
+
+                    <div class="feature-pill">
+                        <span>◈</span>
+                        Security Analysis
+                    </div>
+
+                    <div class="feature-pill">
+                        <span>⚡</span>
+                        Performance
+                    </div>
+
+                    <div class="feature-pill">
+                        <span>◆</span>
+                        Code Quality
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CODE REVIEW WORKSPACE
+        ================================================== -->
+
+        <section class="workspace">
+
+
+            <!-- =============================================
+                 EDITOR CARD
+            ============================================== -->
+
+            <div class="editor-card">
+
+
+                <!-- Editor top bar -->
+
+                <div class="editor-topbar">
+
+                    <div class="editor-heading">
+
+                        <div class="editor-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <div>
+
+                            <h2>Your Code</h2>
+
+                            <p>
+                                Paste your source code for analysis
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="editor-controls">
+
+                        <label for="language">
+                            Language
+                        </label>
+
+                        <select id="language">
+
+                            <option value="python">
+                                Python
+                            </option>
+
+                            <option value="javascript">
+                                JavaScript
+                            </option>
+
+                            <option value="java">
+                                Java
+                            </option>
+
+                            <option value="cpp">
+                                C++
+                            </option>
+
+                            <option value="c">
+                                C
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Editor -->
+
+                <div class="editor-wrapper">
+
+                    <div
+                        class="line-numbers"
+                        id="lineNumbers"
+                    >
+                        1
+                    </div>
+
+
+                    <textarea
+                        id="codeInput"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        placeholder="Paste your code here...
+
+Example:
+
+def calculate_average(numbers):
+    return sum(numbers) / len(numbers)"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Editor footer -->
+
+                <div class="editor-footer">
+
+                    <div class="editor-stats">
+
+                        <span id="lineCount">
+                            1 line
+                        </span>
+
+                        <span class="separator">
+                            •
+                        </span>
+
+                        <span id="charCount">
+                            0 characters
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="clear-btn"
+                        id="clearBtn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 REVIEW ACTION BAR
+            ============================================== -->
+
+            <div class="action-bar">
+
+                <div class="action-message">
+
+                    <div class="action-check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Ready to analyze
+                        </strong>
+
+                        <span>
+                            Your code will be reviewed across
+                            multiple quality dimensions.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="reviewBtn"
+                    class="review-btn"
+                >
+
+                    <span class="btn-icon">
+                        ✦
+                    </span>
+
+                    Analyze Code
+
+                    <span class="btn-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOADING STATE
+        ================================================== -->
+
+        <section
+            id="loadingSection"
+            class="loading-section hidden"
+        >
+
+            <div class="loading-card">
+
+                <div class="loading-animation">
+
+                    <div class="loader-ring"></div>
+
+                    <div class="loader-core">
+                        AI
+                    </div>
+
+                </div>
+
+                <h3>
+                    Analyzing your code
+                </h3>
+
+                <p>
+                    Scanning for bugs, security risks,
+                    performance issues and code-quality improvements.
+                </p>
+
+
+                <div class="analysis-steps">
+
+                    <span>
+                        <i></i>
+                        Understanding code
+                    </span>
+
+                    <span>
+                        <i></i>
+                        Checking quality
+                    </span>
+
+                    <span>
+                        <i></i>
+                        Generating recommendations
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ERROR STATE
+        ================================================== -->
+
+        <section
+            id="errorSection"
+            class="error-section hidden"
+        >
+
+            <div class="error-card">
+
+                <div class="error-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <strong>
+                        Analysis could not be completed
+                    </strong>
+
+                    <p id="errorMessage"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULTS
+        ================================================== -->
+
+        <section
+            id="resultsSection"
+            class="results-section hidden"
+        >
+
+
+            <!-- Results heading -->
+
+            <div class="results-heading">
+
+                <div>
+
+                    <div class="result-badge">
+                        <span>✦</span>
+                        AI ANALYSIS COMPLETE
+                    </div>
+
+                    <h2>
+                        Code Review Results
+                    </h2>
+
+                    <p>
+                        Here's what our AI found in your code.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="verdictBadge"
+                    class="verdict-badge"
+                >
+                    REVIEWED
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUMMARY
+            ================================================== -->
+
+            <div class="summary-card result-card">
+
+                <div class="summary-icon">
+                    ◈
+                </div>
+
+                <div>
+
+                    <div class="result-label">
+                        AI SUMMARY
+                    </div>
+
+                    <p id="summary"></p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 METRICS
+            ================================================== -->
+
+            <div class="metrics-grid">
+
+
+                <div class="metric-card issue-metric">
+
+                    <div class="metric-top">
+
+                        <span class="metric-icon">
+                            !
+                        </span>
+
+                        <span class="metric-label">
+                            ISSUES
+                        </span>
+
+                    </div>
+
+                    <strong id="issueCount">
+                        0
+                    </strong>
+
+                    <span class="metric-description">
+                        Problems detected
+                    </span>
+
+                </div>
+
+
+
+                <div class="metric-card security-metric">
+
+                    <div class="metric-top">
+
+                        <span class="metric-icon">
+                            ◉
+                        </span>
+
+                        <span class="metric-label">
+                            SECURITY
+                        </span>
+
+                    </div>
+
+                    <strong id="securityCount">
+                        0
+                    </strong>
+
+                    <span class="metric-description">
+                        Security concerns
+                    </span>
+
+                </div>
+
+
+
+                <div class="metric-card performance-metric">
+
+                    <div class="metric-top">
+
+                        <span class="metric-icon">
+                            ⚡
+                        </span>
+
+                        <span class="metric-label">
+                            PERFORMANCE
+                        </span>
+
+                    </div>
+
+                    <strong id="performanceCount">
+                        0
+                    </strong>
+
+                    <span class="metric-description">
+                        Performance concerns
+                    </span>
+
+                </div>
+
+
+
+                <div class="metric-card maintainability-metric">
+
+                    <div class="metric-top">
+
+                        <span class="metric-icon">
+                            ◆
+                        </span>
+
+                        <span class="metric-label">
+                            MAINTAINABILITY
+                        </span>
+
+                    </div>
+
+                    <strong id="maintainabilityCount">
+                        0
+                    </strong>
+
+                    <span class="metric-description">
+                        Quality concerns
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DETAILED ANALYSIS
+            ================================================== -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        DETAILED ANALYSIS
+                    </span>
+
+                    <h3>
+                        What needs attention?
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="details-grid">
+
+
+                <!-- Issues -->
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+
+                        <div class="analysis-title">
+
+                            <span class="analysis-icon danger">
+                                !
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Issues
+                                </h3>
+
+                                <span>
+                                    Bugs & runtime problems
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="issues"
+                        class="result-list"
+                    >
+
+                        <div class="empty-result">
+                            No issues detected.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Security -->
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+
+                        <div class="analysis-title">
+
+                            <span class="analysis-icon security">
+                                ◉
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Security
+                                </h3>
+
+                                <span>
+                                    Vulnerabilities & risks
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="security"
+                        class="result-list"
+                    >
+
+                        <div class="empty-result">
+                            No security issues detected.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Performance -->
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+
+                        <div class="analysis-title">
+
+                            <span class="analysis-icon performance">
+                                ⚡
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Performance
+                                </h3>
+
+                                <span>
+                                    Efficiency & optimization
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="performance"
+                        class="result-list"
+                    >
+
+                        <div class="empty-result">
+                            No performance issues detected.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Maintainability -->
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+
+                        <div class="analysis-title">
+
+                            <span class="analysis-icon maintainability">
+                                ◆
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Maintainability
+                                </h3>
+
+                                <span>
+                                    Readability & best practices
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="maintainability"
+                        class="result-list"
+                    >
+
+                        <div class="empty-result">
+                            No maintainability issues detected.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 IMPROVEMENTS
+            ================================================== -->
+
+            <div class="improvement-card result-card">
+
+                <div class="improvement-header">
+
+                    <div class="analysis-title">
+
+                        <span class="analysis-icon improvement">
+                            ✦
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Recommended Improvements
+                            </h3>
+
+                            <span>
+                                Practical suggestions to make your
+                                code better
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="improvements"
+                    class="improvement-list"
+                ></div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 IMPROVED CODE
+            ================================================== -->
+
+            <div class="code-result-card result-card">
+
+                <div class="code-result-header">
+
+                    <div class="analysis-title">
+
+                        <span class="analysis-icon code">
+                            &lt;/&gt;
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Improved Code
+                            </h3>
+
+                            <span>
+                                AI-generated optimized version
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="copyBtn"
+                        class="copy-btn"
+                    >
+                        Copy Code
+                    </button>
+
+                </div>
+
+
+                <div class="code-window">
+
+                    <div class="code-window-bar">
+
+                        <div class="window-dots">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <span>
+                            improved_code
+                        </span>
+
+                    </div>
+
+
+                    <pre><code id="improvedCode"></code></pre>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FINAL VERDICT
+            ================================================== -->
+
+            <div class="verdict-card">
+
+                <div class="verdict-icon">
+                    ✓
+                </div>
+
+                <div class="verdict-content">
+
+                    <span class="verdict-label">
+                        FINAL VERDICT
+                    </span>
+
+                    <p id="finalVerdict"></p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TECHNICAL METADATA
+            ================================================== -->
+
+            <div class="metadata-card">
+
+                <div class="metadata-title">
+                    ANALYSIS DETAILS
+                </div>
+
+
+                <div class="metadata-grid">
+
+                    <div>
+
+                        <span>
+                            AI Model
+                        </span>
+
+                        <strong id="modelName">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Retrieval
+                        </span>
+
+                        <strong id="retrievalTime">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            AI Analysis
+                        </span>
+
+                        <strong id="llmLatency">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Time
+                        </span>
+
+                        <strong id="totalTime">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                Vitexor <span>AI</span>
+            </div>
+
+            <div class="footer-text">
+                AI-powered code intelligence
+            </div>
+
+            <div class="footer-tech">
+                CodeBERT · FAISS · Gemini
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
